@@ -50,6 +50,7 @@ setup(
     url='https://github.com/madedotcom/servicecatalog',
 
     author='Bob Gregory',
+    author_email='bob@made.com',
     classifiers=classifiers,
     description='Provides a simple dict-based interface to Consul\'s service discovery.',
     install_requires=install_requires,

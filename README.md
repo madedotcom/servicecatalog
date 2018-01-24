@@ -6,7 +6,6 @@ Servicecatalog is a simple library that provides a dict-based interface to Consu
 
 ```python
 import servicecatalog
-import requests
 
 catalog = sevicecatalog.ServiceCatalog(
     host='consul.service.consul',
