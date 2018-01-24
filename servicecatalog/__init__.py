@@ -11,8 +11,8 @@ service = namedtuple('service', ['ts', 'instances'])
 
 
 class ServiceInstance(instance):
-    def as_uri(self, path=""):
-        return "http://{0}:{1}/{2}".format(self.address, self.port, path)
+    def as_uri(self, scheme='http', path=""):
+        return "{0}://{1}:{2}/{3}".format(self.address, self.port, path)
 
 
 class ServiceCatalog:
