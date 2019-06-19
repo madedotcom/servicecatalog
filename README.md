@@ -7,7 +7,7 @@ Servicecatalog is a simple library that provides a dict-based interface to Consu
 ```python
 import servicecatalog
 
-catalog = sevicecatalog.ServiceCatalog(
+catalog = servicecatalog.ServiceCatalog(
     host='consul.service.consul',
     port=8500, 
     interval=60 # servicecatalog will poll Consul for changes periodically
@@ -32,3 +32,10 @@ Yes. Servicecatalog runs a background thread that keeps data fresh. So long as y
 ### What if I have multiple instances of the same service registered?
 
 Servicecatalog will return a random member of the set each time you ask for a service.
+
+### Running in offline mode eg. on continuous integration
+
+If you wanna use this library in offline mode - without actually talking to consul - eg. when running your tests locally / on CI,
+you can use offline mode and service values overrides.
+ 
+See tests/test_offline_mode.py as an example how to set environment variables for such use case.
